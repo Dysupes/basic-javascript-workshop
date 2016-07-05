@@ -136,15 +136,34 @@ console.log(factorial(45));
 
 function longestWord(phrase){
     var longWord = phrase.split(" ");
-    var longerWords = "";
+    var currentLongest = "";
     
     longWord.forEach(function(word) {
-    if (word.length > longerWords.length) {
-            longerWords = word;
+    if (word.length > currentLongest.length) {
+            currentLongest = word;
         };
     });    
 
-return longerWords    
+return currentLongest    
 };
 
 console.log(longestWord("The Pyramids are in Egypt"));
+
+// This function capitalizes the first letter of each word in a phrase
+
+function capitalize(phrase1){
+    var eachWord = phrase1.toLowerCase().split(" ");
+    var finalPhrase = [];
+    
+    for(var i = 0; i < eachWord.length; i++){
+        
+        var firstLetter =  eachWord[i].charAt(0).toUpperCase();
+        var restOfWord = eachWord[i].substring(1).toLowerCase();
+        var finalWord = firstLetter + restOfWord;
+        finalPhrase.push(finalWord);
+    };
+    return finalPhrase.join(' ');
+    
+};
+
+console.log(capitalize("The monkey crossed the street"));
