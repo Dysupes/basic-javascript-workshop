@@ -23,3 +23,28 @@ lastLetter("Dylan");
 lastLetter("");
 
 lastLetter("Emma");
+
+/* This function takes a string and a number and print a character
+    FYI: pono is Korean for number :) */
+    
+function character(word,pono) {
+    console.log(word[pono]);
+};
+
+character("George",2);
+
+character("unicorn",5);
+
+character("",0);
+
+// This function takes two number inputs and prints the sum
+
+function addition(num1, num2) {
+    console.log(num1 + num2);
+};
+
+addition(2,4);
+
+addition(465,978);
+
+addition(3,12);
