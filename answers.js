@@ -1,4 +1,4 @@
-// This is the first step in Workshop 1.
+// This is Workshop 1.
 
 
 // This function will reveal the first letter of the word and print it
@@ -95,3 +95,56 @@ function repeat(sent,mult1) {
 };
 
 repeat("Javascript is fun!",4);
+
+repeat("Javascript is getting harder!",7);
+
+repeat("I'm getting on just fine so far!",8);
+
+// This function should take a string and reverse it
+
+function reverse(sent1) {
+    var reversed = "";                               // Reversed as an empty string helps it to start 
+    for(var i = sent1.length - 1; i >= 0; i--) {    // Sets it to decline from the end
+        reversed = reversed + sent1[i];             // Allows the string to concatenate
+    };
+    return reversed;                                // Allows it to keep being used over and over
+};
+
+console.log(reverse("Dylan"));
+
+console.log(reverse("waterfall"));
+
+console.log(reverse("earth"));
+
+// This function returns the factorial of a number
+
+function factorial(numbers1) {
+	var fact = 1;
+	for(var i = numbers1; i > 0; i--){
+		fact = fact * i;
+	};
+	return fact;
+};
+
+console.log(factorial(5));
+
+console.log(factorial(8));
+
+console.log(factorial(45));
+
+// This function returns the longest word in a sentence
+
+function longestWord(phrase){
+    var longWord = phrase.split(" ");
+    var longerWords = "";
+    
+    longWord.forEach(function(word) {
+    if (word.length > longerWords.length) {
+            longerWords = word;
+        };
+    });    
+
+return longerWords    
+};
+
+console.log(longestWord("The Pyramids are in Egypt"));
